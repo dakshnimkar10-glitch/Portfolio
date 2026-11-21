@@ -1,0 +1,13 @@
+{
+  "name": "daksh-nimkar-portfolio",
+  "version": "1.0.0",
+  "description": "Daksh Nimkar — Software Developer & AI Engineer Portfolio",
+  "scripts": {
+    "dev": "vite --port 5173 --open",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daksh Nimkar | Software Developer & AI Engineer</title>
+  <meta name="description" content="Portfolio of Daksh Nimkar - Aspiring Software Developer & AI Engineer specialized in Java, Spring Boot, Python, Machine Learning (TensorFlow, OpenCV), and scalable architectures.">
+  <meta name="keywords" content="Daksh Nimkar, Software Developer, AI Engineer, Java, Spring Boot, Python, Machine Learning, Nagpur, Portfolio">
+  <meta name="author" content="Daksh Nimkar">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Daksh Nimkar | Software Developer & AI Engineer">
+  <meta property="og:description" content="Explore projects, skills, backend systems, and AI applications by Daksh Nimkar.">
+  <meta property="og:image" content="./assets/avatar.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon Icon (Vector SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2300f2fe'/><text x='50%' y='60%' font-size='50' font-family='sans-serif' font-weight='900' fill='%23050a14' text-anchor='middle' dominant-baseline='middle'>DN</text></svg>">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Ambient Dynamic Lighting Canvas & Glow Orbs -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="ambient-orb orb-3"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" id="nav-brand-logo">
+        <div class="brand-logo">DN</div>
+        <div class="brand-text">
+          <span class="brand-name">Daksh Nimkar</span>
+          <span class="brand-status">
+            <span class="status-dot"></span> Available for Hire
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Menu -->
+      <nav>
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#ai-assistant" class="nav-link">Ask AI</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Dropdown/Switcher -->
+        <div class="theme-dropdown" title="Choose Atmosphere Theme">
+          <button class="btn btn-secondary btn-sm" id="theme-btn" style="padding: 6px 12px; font-size: 0.8rem;">
+            🎨 Theme
+          </button>
+          <div style="position: absolute; right: 0; top: 120%; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 8px; display: none; flex-direction: column; gap: 6px; z-index: 100; min-width: 140px; box-shadow: var(--shadow-lg);" id="theme-menu">
+            <button class="btn btn-outline btn-sm" style="width: 100%; justify-content: flex-start;" data-set-theme="cyber">🌌 Cyber Blue</button>
+            <button class="btn btn-outline btn-sm" style="width: 100%; justify-content: flex-start;" data-set-theme="emerald">🌿 Emerald Matrix</button>
+            <button class="btn btn-outline btn-sm" style="width: 100%; justify-content: flex-start;" data-set-theme="synthwave">🔮 Synthwave Violet</button>
+            <button class="btn btn-outline btn-sm" style="width: 100%; justify-content: flex-start;" data-set-theme="light">☀️ Clean Light</button>
+          </div>
+        </div>
+
+        <!-- Quick Resume Modal Trigger -->
+        <button class="btn btn-primary btn-sm open-resume-btn" id="nav-resume-btn">
+          📄 Resume
+        </button>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-location">
+            <span>📍</span> Nagpur, Maharashtra, India • Open to Relocate
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Daksh Nimkar</span>
+          </h1>
+
+          <div class="typewriter-wrapper">
+            <span>&gt; </span>
+            <span id="typewriter-text">Software Developer &amp; AI Engineer</span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            Aspiring Software Developer with a strong foundation in <strong>Java</strong>, <strong>Python</strong>, and <strong>C</strong>. Passionate about building robust backend architectures, high-performance APIs, and practical <strong>Machine Learning &amp; AI applications</strong> that solve real-world challenges.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+              <span>🚀 Explore Projects</span>
+            </a>
+            <button class="btn btn-secondary open-resume-btn" id="hero-btn-resume">
+              <span>📄 View / Print CV</span>
+            </button>
+            <a href="#contact" class="btn btn-outline" id="hero-btn-contact">
+              <span>💬 Let's Connect</span>
+            </a>
+          </div>
+
+          <!-- Quick Connect & Social Pills -->
+          <div class="hero-socials">
+            <a href="mailto:dakshnimkar10@gmail.com" class="social-pill" title="Email Daksh">
+              <span>✉️</span> dakshnimkar10@gmail.com
+            </a>
+            <a href="tel:+918149329020" class="social-pill" title="Call Daksh">
+              <span>📞</span> +91 8149329020
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile">
+              <span>🔗</span> LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Profile">
+              <span>💻</span> GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Interactive IDE Simulator Window -->
+        <div class="hero-ide-window glass-card">
+          <div class="ide-header">
+            <div class="ide-controls">
+              <span class="ide-dot dot-red"></span>
+              <span class="ide-dot dot-yellow"></span>
+              <span class="ide-dot dot-green"></span>
+            </div>
+            <div class="ide-tabs">
+              <button class="ide-tab active" data-file="DeveloperProfile.java">DeveloperProfile.java</button>
+              <button class="ide-tab" data-file="ml_pipeline.py">ml_pipeline.py</button>
+              <button class="ide-tab" data-file="contact.json">contact.json</button>
+            </div>
+            <div></div>
+          </div>
+
+          <div class="ide-body">
+            <pre id="ide-code-display">public class DeveloperProfile {
+    public static void main(String[] args) {
+        String developer = "Daksh Nimkar";
+        String degree = "B.Tech in Artificial Intelligence";
+        String[] coreLanguages = {"Java", "Python", "C", "C++"};
+        String backend = "Spring Boot, REST APIs, MySQL";
+        
+        System.out.println("Status: Open to relocate & work!");
+        System.out.println("Ready to build scalable software solutions.");
+    }
+}</pre>
+          </div>
+
+          <div class="ide-footer">
+            <div class="ide-status">
+              <span>⚡</span> UTF-8 &nbsp;|&nbsp; JDK 21 / Python 3.12 &nbsp;|&nbsp; Git: main*
+            </div>
+            <button class="btn-run-code" id="btn-run-code">
+              <span>▶</span> Run Code
+            </button>
+          </div>
+
+          <div class="ide-output-box" id="ide-output-box"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HIGHLIGHT METRICS STRIP
+         ========================================================================== -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="glass-card metric-card">
+            <div class="metric-icon">🎓</div>
+            <div class="metric-val">7.7</div>
+            <div class="metric-label">CGPA in B.Tech</div>
+            <div class="metric-sub">Artificial Intelligence Major</div>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon">🏆</div>
+            <div class="metric-val">3rd Place</div>
+            <div class="metric-label">Hackathon Winner</div>
+            <div class="metric-sub">5+ Competitive Hackathons</div>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon">⚙️</div>
+            <div class="metric-val">10+</div>
+            <div class="metric-label">Tech Stack Mastered</div>
+            <div class="metric-sub">Java, Python, Spring Boot, React</div>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon">📍</div>
+            <div class="metric-val">100%</div>
+            <div class="metric-label">Open to Relocation</div>
+            <div class="metric-sub">Nagpur, Pune, Bengaluru &amp; Beyond</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">About The Developer</div>
+          <h2 class="section-title">Driven by Logic, <span class="gradient-text">Powered by AI</span></h2>
+          <p class="section-desc">Get to know the developer behind the code — combining technical rigor with creative problem solving.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Card with Avatar -->
+          <div class="about-card-wrapper">
+            <div class="glass-card about-avatar-card">
+              <div class="avatar-image-box">
+                <img src="./assets/avatar.jpg" alt="Daksh Nimkar - AI & Software Developer" loading="lazy">
+                <div class="avatar-overlay-badge">
+                  <span>📍 Nagpur, Maharashtra</span>
+                  <span style="color: #10b981; font-weight: 600;">● Active</span>
+                </div>
+              </div>
+              <h3 class="avatar-meta-name">Daksh Nimkar</h3>
+              <p class="avatar-meta-role">B.Tech in Artificial Intelligence</p>
+              <div class="avatar-meta-tags">
+                <span class="meta-chip">☕ Java &amp; Spring Boot</span>
+                <span class="meta-chip">🐍 Python &amp; ML</span>
+                <span class="meta-chip">🛡️ Systems &amp; Security</span>
+                <span class="meta-chip">🌐 Full-Stack Web</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative and Key Pillars -->
+          <div class="about-narrative">
+            <p class="lead-p">
+              I am an aspiring <strong>Software Developer and Artificial Intelligence engineer</strong> pursuing my B.Tech at <em>G. H. Raisoni College of Engineering and Management (RTMNU)</em> in Nagpur.
+            </p>
+            <p style="color: var(--text-muted); line-height: 1.7;">
+              My journey began with a diploma in Computer Technology, providing me with deep fundamentals in object-oriented programming, data structures, and computer networking. Over the years, I've transformed theoretical concepts into production-grade systems — from an enterprise <strong>LAN-based Secure Process Management System (SPMS)</strong> to holistic wellness platforms like <strong>HerbalCare Advisor</strong>.
+            </p>
+
+            <div class="pillar-grid">
+              <div class="pillar-item">
+                <div class="pillar-icon">⚡</div>
+                <h4 class="pillar-title">Backend Architecture</h4>
+                <p class="pillar-desc">Building resilient RESTful services with Java, Spring Boot, MySQL, and Supabase for transactional reliability.</p>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon">🧠</div>
+                <h4 class="pillar-title">AI &amp; Neural Nets</h4>
+                <p class="pillar-desc">Developing predictive and vision models using TensorFlow, OpenCV, and modern LLM APIs (Gemini, OpenAI, OpenRouter).</p>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon">🛡️</div>
+                <h4 class="pillar-title">Security &amp; Networks</h4>
+                <p class="pillar-desc">Designing LAN-based access controls, TCP/IP packet filtering, and role-based privilege systems.</p>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon">⏱️</div>
+                <h4 class="pillar-title">Rapid Innovation</h4>
+                <p class="pillar-desc">Thriving in time-sensitive hackathons (3rd place winner) and turning ambiguous problem statements into working prototypes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROFESSIONAL EXPERIENCE
+         ========================================================================== -->
+    <section id="experience" style="background: rgba(0, 0, 0, 0.2);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Industry Experience</div>
+          <h2 class="section-title">Where I've <span class="gradient-text">Delivered Impact</span></h2>
+          <p class="section-desc">Hands-on enterprise software engineering experience building scalable backend microservices.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1: Industry Collaboration -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-purple); box-shadow: 0 0 15px var(--accent-purple);"></div>
+            <div class="glass-card exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role-title">Software Engineering Collaborator</h3>
+                  <div class="exp-company">
+                    <span>🤝</span> Industry Collaboration Experience
+                  </div>
+                </div>
+                <div class="exp-badge-duration" style="border-color: rgba(121, 40, 202, 0.4); color: #c084fc;">
+                  🏆 Post-Hackathon Recognition
+                </div>
+              </div>
+
+              <ul class="exp-list">
+                <li>
+                  Collaborating with industry professionals on the further development and scaling of an advanced <strong>Workflow Optimization System</strong> following hackathon recognition.
+                </li>
+                <li>
+                  Architecting modular process pipelines and translating prototype designs into production-ready software solutions.
+                </li>
+                <li>
+                  Engaging in technical design sessions focusing on asynchronous data flows, system throughput, and maintainable software engineering practices.
+                </li>
+              </ul>
+
+              <div class="tech-tag-row">
+                <span class="tech-tag">Workflow Optimization</span>
+                <span class="tech-tag">System Design</span>
+                <span class="tech-tag">Hackathon Recognition</span>
+                <span class="tech-tag">Industry Mentorship</span>
+                <span class="tech-tag">Process Automation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: It networkz Backend Internship -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="glass-card exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role-title">Backend Developer Intern</h3>
+                  <div class="exp-company">
+                    <span>🏢</span> It networkz – Nagpur
+                  </div>
+                </div>
+                <div class="exp-badge-duration">
+                  📅 7th June 2023 – 18th July 2023
+                </div>
+              </div>
+
+              <ul class="exp-list">
+                <li>
+                  Developed a robust backend <strong>Human Resource Management System (HRMS)</strong> using <strong>Java</strong> and <strong>Spring Boot</strong> to streamline employee records, attendance monitoring, and automated leave requests.
+                </li>
+                <li>
+                  Architected and optimized <strong>RESTful APIs</strong> integrated with <strong>MySQL</strong> for fast query execution, relational data integrity, and secure data storage.
+                </li>
+                <li>
+                  Leveraged <strong>Git &amp; GitHub</strong> for strict branch management, peer code reviews, and maintaining a scalable, modular architecture aligned with clean code standards.
+                </li>
+              </ul>
+
+              <div class="tech-tag-row">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">RESTful APIs</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Git &amp; GitHub</span>
+                <span class="tech-tag">Backend Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROJECTS SECTION
+         ========================================================================== -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Featured Work</div>
+          <h2 class="section-title">Engineering <span class="gradient-text">Practical Solutions</span></h2>
+          <p class="section-desc">Explore projects ranging from network-level security and systems programming to modern full-stack web and AI integrations.</p>
+        </div>
+
+        <!-- Project Category Filters -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="security">Security &amp; Systems</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; Web</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Machine Learning</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: SPMS -->
+          <article class="glass-card project-card" data-category="security backend">
+            <div class="project-media">
+              <img src="./assets/spms.jpg" alt="Secure Process Management System SPMS" loading="lazy">
+              <div class="project-badge-corner">🛡️ Systems &amp; Security</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Secure Process Management System (SPMS)</h3>
+              <p class="project-desc">
+                An enterprise LAN security platform built to govern internal networks. Enables network administrators to manage connected nodes, isolate unauthenticated terminals, and apply packet-level access rules.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Built a centralized LAN management engine to create, manage, and instantly block unauthorized users.</li>
+                <li>Engineered real-time website and protocol filtering to regulate internet access across the entire local area network.</li>
+                <li>Designed socket-based daemon listeners over TCP/IP in Linux environments.</li>
+              </ul>
+
+              <div class="tech-tag-row">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">TCP/IP</span>
+                <span class="tech-tag">Linux</span>
+                <span class="tech-tag">Socket Programming</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-secondary btn-sm" style="flex: 1;">
+                  <span>Inquire Architecture</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: HerbalCare Advisor -->
+          <article class="glass-card project-card" data-category="fullstack">
+            <div class="project-media">
+              <img src="./assets/herbalcare.jpg" alt="HerbalCare Advisor HealthTech Web App" loading="lazy">
+              <div class="project-badge-corner">🌿 HealthTech &amp; Full-Stack</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">HerbalCare Advisor</h3>
+              <p class="project-desc">
+                An intelligent herbal wellness advisory platform that matches health concerns with verified botanical remedies, therapeutic benefits, and scientific dosage precautions.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Algorithmic recommendation system analyzing user-submitted symptoms to suggest personalized botanical remedies.</li>
+                <li>Comprehensive knowledge database covering botanical compounds, contraindications, and active constituents.</li>
+                <li>Responsive, aesthetic web interface built with React.js connected to an Express/MongoDB REST backend.</li>
+              </ul>
+
+              <!-- Interactive Live Remedy Finder Widget -->
+              <div class="demo-widget-box">
+                <div class="demo-widget-title">
+                  <span>⚡ Interactive Symptom Preview</span>
+                  <span>Try clicking:</span>
+                </div>
+                <div class="demo-remedy-selector">
+                  <button class="remedy-pill active" data-symptom="stress">Stress &amp; Anxiety</button>
+                  <button class="remedy-pill" data-symptom="immunity">Immunity Boost</button>
+                  <button class="remedy-pill" data-symptom="digestion">Gut Health</button>
+                  <button class="remedy-pill" data-symptom="sleep">Sleep Quality</button>
+                </div>
+                <div class="remedy-result-card" id="remedy-result-display">
+                  <strong style="color: #10b981; display: block; margin-bottom: 2px;">🌿 Recommendation: Ashwagandha (Withania somnifera) &amp; Chamomile</strong>
+                  <div><strong>Benefits:</strong> Lowers cortisol levels, supports mental clarity, and balances the nervous system.</div>
+                  <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 4px;"><strong>Recommended Usage:</strong> 300mg standardized extract or herbal infusion 1 hour before sleep.</div>
+                </div>
+              </div>
+
+              <div class="tech-tag-row">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">RESTful API</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-secondary btn-sm" style="flex: 1;">
+                  <span>Discuss Full Stack</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE RECRUITER AI CHATBOT (ASK DAKSH AI)
+         ========================================================================== -->
+    <section id="ai-assistant" class="ai-concierge-section">
+      <div class="container">
+        <div class="glass-card ai-card">
+          <div class="ai-card-header">
+            <div class="ai-badge-group">
+              <div class="ai-avatar">🤖</div>
+              <div class="ai-meta">
+                <h4>Ask Daksh AI Concierge</h4>
+                <span>🟢 Interactive Knowledge Agent • Instant Answers</span>
+              </div>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan);">
+              MODEL: DN-PORTFOLIO-v1
+            </div>
+          </div>
+
+          <div class="ai-chat-body" id="ai-chat-body">
+            <div class="chat-bubble bubble-ai">
+              👋 Hi there! I'm <strong>Daksh AI</strong>, trained on Daksh Nimkar's technical background, projects, education, and career experience. Click any suggested topic below or type your question!
+            </div>
+          </div>
+
+          <div class="ai-suggestions">
+            <button class="ai-suggestion-chip">Tell me about Daksh's experience</button>
+            <button class="ai-suggestion-chip">What projects has he built?</button>
+            <button class="ai-suggestion-chip">What are his core technical skills?</button>
+            <button class="ai-suggestion-chip">What is his educational background?</button>
+            <button class="ai-suggestion-chip">How can I contact or hire Daksh?</button>
+          </div>
+
+          <div class="ai-input-bar">
+            <input type="text" id="ai-chat-input" class="ai-input" placeholder="Ask anything about Daksh's qualifications, skills, or projects..." autocomplete="off">
+            <button class="btn btn-primary" id="ai-send-btn">
+              <span>Send</span> ➔
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TECHNICAL SKILLS MATRIX
+         ========================================================================== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Capabilities</div>
+          <h2 class="section-title">Technical <span class="gradient-text">Skill Arsenal</span></h2>
+          <p class="section-desc">A categorized overview of technologies, frameworks, databases, and AI tooling I utilize.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">☕</div>
+                <div>
+                  <div class="skill-name">Java</div>
+                  <div class="skill-category-tag">Language • OOP</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 90%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Spring Boot, OOP, Data Structures</span>
+              <span>Advanced</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">🐍</div>
+                <div>
+                  <div class="skill-name">Python</div>
+                  <div class="skill-category-tag">Language • AI/ML</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 88%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>TensorFlow, OpenCV, Data Science</span>
+              <span>Advanced</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">⚡</div>
+                <div>
+                  <div class="skill-name">C &amp; C++</div>
+                  <div class="skill-category-tag">Systems • Fundamentals</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 82%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Memory, Pointers, Algorithms</span>
+              <span>Proficient</span>
+            </div>
+          </div>
+
+          <!-- AI & ML -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">🧠</div>
+                <div>
+                  <div class="skill-name">TensorFlow</div>
+                  <div class="skill-category-tag">AI &amp; Machine Learning</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 85%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Deep Learning, Neural Networks</span>
+              <span>Proficient</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">👁️</div>
+                <div>
+                  <div class="skill-name">OpenCV</div>
+                  <div class="skill-category-tag">Computer Vision</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 80%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Image Processing, Filters</span>
+              <span>Proficient</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">📊</div>
+                <div>
+                  <div class="skill-name">Pandas &amp; NumPy</div>
+                  <div class="skill-category-tag">Data Manipulation</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 86%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Matplotlib, Data Pipelines</span>
+              <span>Advanced</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">🐬</div>
+                <div>
+                  <div class="skill-name">MySQL</div>
+                  <div class="skill-category-tag">Relational Database</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 88%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Schema Design, Indexing, Joins</span>
+              <span>Advanced</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">⚡</div>
+                <div>
+                  <div class="skill-name">Supabase</div>
+                  <div class="skill-category-tag">Cloud Database • Auth</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 84%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>PostgreSQL Backend, Realtime</span>
+              <span>Proficient</span>
+            </div>
+          </div>
+
+          <!-- Cloud & APIs -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">☁️</div>
+                <div>
+                  <div class="skill-name">Cloud &amp; DevOps</div>
+                  <div class="skill-category-tag">Deployment &amp; Hosting</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 85%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Vercel, Render, Supabase</span>
+              <span>Proficient</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">🤖</div>
+                <div>
+                  <div class="skill-name">GenAI &amp; LLM APIs</div>
+                  <div class="skill-category-tag">Modern AI Integration</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 89%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Gemini API, OpenAI API, OpenRouter</span>
+              <span>Advanced</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">🐙</div>
+                <div>
+                  <div class="skill-name">Git &amp; GitHub</div>
+                  <div class="skill-category-tag">Version Control</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 90%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Branching, Pull Requests, CI/CD</span>
+              <span>Advanced</span>
+            </div>
+          </div>
+
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-name">
+                <div class="skill-badge-icon">🐧</div>
+                <div>
+                  <div class="skill-name">Linux &amp; Networking</div>
+                  <div class="skill-category-tag">Systems &amp; TCP/IP</div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-fill" style="width: 82%;"></div>
+            </div>
+            <div class="skill-card-meta">
+              <span>Shell, TCP/IP, Packet Analysis</span>
+              <span>Proficient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCATION & ACCOMPLISHMENTS
+         ========================================================================== -->
+    <section id="education" style="background: rgba(0, 0, 0, 0.2);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Milestones</div>
+          <h2 class="section-title">Academic &amp; <span class="gradient-text">Competitive Journey</span></h2>
+          <p class="section-desc">Consistent track record of academic foundation and competitive achievements under pressure.</p>
+        </div>
+
+        <div class="edu-acc-grid">
+          <!-- Left Column: Education -->
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-highlight); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+              <span>🎓</span> Educational Qualifications
+            </h3>
+
+            <div class="edu-stack">
+              <!-- B.Tech -->
+              <div class="glass-card edu-card">
+                <div class="edu-meta-top">
+                  <h4 class="edu-degree">Bachelor of Technology – Artificial Intelligence</h4>
+                  <span class="edu-badge-score">C.G.P.A.: 7.7</span>
+                </div>
+                <div class="edu-institution">G. H. Raisoni College of Engineering and Management (RTMNU), Nagpur</div>
+                <div class="edu-period">Sept 2024 – June 2027 (Ongoing)</div>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">
+                  Focusing on core AI algorithms, machine learning systems, deep neural networks, mathematical modeling, and enterprise software engineering.
+                </p>
+              </div>
+
+              <!-- Diploma -->
+              <div class="glass-card edu-card" style="border-left-color: var(--accent-purple);">
+                <div class="edu-meta-top">
+                  <h4 class="edu-degree">Diploma – Computer Technology</h4>
+                  <span class="edu-badge-score">Score: 76%</span>
+                </div>
+                <div class="edu-institution">Dharampeth Polytechnic (MSBTE), Nagpur</div>
+                <div class="edu-period">July 2021 – June 2024</div>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">
+                  Comprehensive grounding in computer hardware, networking topologies, Java object-oriented programming, and relational database systems.
+                </p>
+              </div>
+
+              <!-- SSC -->
+              <div class="glass-card edu-card" style="border-left-color: var(--accent-amber);">
+                <div class="edu-meta-top">
+                  <h4 class="edu-degree">S.S.C (Secondary School Certificate)</h4>
+                  <span class="edu-badge-score">Score: 75.8%</span>
+                </div>
+                <div class="edu-institution">Agragami High School (CBSE), Wardha</div>
+                <div class="edu-period">Completed June 2021</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Accomplishments -->
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-highlight); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+              <span>🏆</span> Honors &amp; Accomplishments
+            </h3>
+
+            <div class="acc-stack">
+              <div class="glass-card acc-card">
+                <div class="acc-icon-box">🥉</div>
+                <div class="acc-content">
+                  <h4>3rd Place - Hackathon Winner</h4>
+                  <p>
+                    Participated in <strong>5+ competitive hackathons</strong>; achieved <strong>3rd place</strong> in a high-intensity hackathon by conceiving, architecting, and deploying an innovative software solution under strict time constraints.
+                  </p>
+                </div>
+              </div>
+
+              <div class="glass-card acc-card">
+                <div class="acc-icon-box" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3);">🏅</div>
+                <div class="acc-content">
+                  <h4>5th Place - State MSBTE Competition</h4>
+                  <p>
+                    Competed against top engineering institutions across Maharashtra in the state-level <strong>MSBTE technical championship</strong> and achieved <strong>5th place</strong> among participants.
+                  </p>
+                </div>
+              </div>
+
+              <div class="glass-card acc-card">
+                <div class="acc-icon-box" style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.3);">🚀</div>
+                <div class="acc-content">
+                  <h4>5+ Hackathons Competitor</h4>
+                  <p>
+                    Continuous enthusiast for fast-prototyping, real-time collaboration, and translating emerging ideas into concrete functional codebases.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & CONNECT SECTION
+         ========================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-desc">I am currently actively seeking full-time software developer and AI engineer opportunities. Open to relocate immediately.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-stack">
+            <!-- Email -->
+            <div class="glass-card contact-card-item" data-copy="dakshnimkar10@gmail.com" title="Click to copy email address">
+              <div class="contact-icon-box">✉️</div>
+              <div>
+                <div class="contact-label">Email Address</div>
+                <div class="contact-val">dakshnimkar10@gmail.com</div>
+              </div>
+              <span class="copy-badge">Copy 📋</span>
+            </div>
+
+            <!-- Phone -->
+            <div class="glass-card contact-card-item" data-copy="+91 8149329020" title="Click to copy phone number">
+              <div class="contact-icon-box">📞</div>
+              <div>
+                <div class="contact-label">Phone &amp; WhatsApp</div>
+                <div class="contact-val">+91 8149329020</div>
+              </div>
+              <span class="copy-badge">Copy 📋</span>
+            </div>
+
+            <!-- Location -->
+            <div class="glass-card contact-card-item">
+              <div class="contact-icon-box">📍</div>
+              <div>
+                <div class="contact-label">Current Location</div>
+                <div class="contact-val">Nagpur, Maharashtra, India</div>
+                <div style="font-size: 0.78rem; color: #10b981; margin-top: 2px;">✓ Open to relocate across India &amp; Remote</div>
+              </div>
+            </div>
+
+            <!-- Social Links Group -->
+            <div class="glass-card" style="padding: 20px;">
+              <div class="contact-label" style="margin-bottom: 12px;">Professional Networks</div>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="flex: 1;">
+                  <span>🔗 LinkedIn Profile</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="flex: 1;">
+                  <span>💻 GitHub Profile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Inquiry Form -->
+          <div class="glass-card contact-form-card">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--text-highlight); margin-bottom: 8px;">
+              Send a Direct Message
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">
+              Fill out this quick form to send an instant email to Daksh.
+            </p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Your Name / Organization</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Recruiter, Engineering Manager" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Your Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. hr@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message / Opportunity Details</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Hello Daksh, we would love to discuss a Software Developer role with you..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>✉️ Dispatch Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       RESUME VIEWER & PRINTABLE MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="resume-title">Curriculum Vitae — Daksh Nimkar</h3>
+        <div class="modal-actions">
+          <button class="btn btn-secondary btn-sm" id="print-resume-btn">
+            🖨️ Print / Save as PDF
+          </button>
+          <button class="btn btn-outline btn-sm" id="close-resume-btn" style="padding: 6px 12px;">
+            ✕ Close
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-print-sheet">
+          <!-- Resume Header -->
+          <div class="resume-header">
+            <h1 class="resume-name">Daksh Nimkar</h1>
+            <div class="resume-contact-line">
+              <a href="mailto:dakshnimkar10@gmail.com" class="resume-link">dakshnimkar10@gmail.com</a> &nbsp;|&nbsp;
+              <a href="tel:+918149329020" class="resume-link">+91 8149329020</a> &nbsp;|&nbsp;
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="resume-link">LinkedIn</a> &nbsp;|&nbsp;
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="resume-link">GitHub</a> &nbsp;|&nbsp;
+              <span>Nagpur, open to relocate</span>
+            </div>
+          </div>
+
+          <!-- Professional Summary -->
+          <div class="resume-section-title">Professional Summary</div>
+          <p class="resume-summary-text">
+            Aspiring Software Developer with a strong foundation in Java, Python, and C. Passionate about developing efficient applications, solving real-world problems, and continuously enhancing technical and problem-solving skills.
+          </p>
+
+          <!-- Education -->
+          <div class="resume-section-title">Education</div>
+          <div class="resume-entry">
+            <div class="resume-entry-top">
+              <span>Bachelor of Technology – Artificial Intelligence</span>
+              <span>Sept 2024- June 2027</span>
+            </div>
+            <div class="resume-entry-sub">G. H. Raisoni College of Engineering and Management (RTMNU), Nagpur</div>
+            <ul>
+              <li><strong>C.G.P.A.:</strong> -7.7</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-top">
+              <span>Diploma – Computer Technology</span>
+              <span>July 2021- June 2024</span>
+            </div>
+            <div class="resume-entry-sub">Dharampeth Polytechnic (MSBTE), Nagpur</div>
+            <ul>
+              <li><strong>Percentage:</strong> - 76%</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-top">
+              <span>S.S.C - Agragami High School (CBSE), Wardha</span>
+              <span>June 2021</span>
+            </div>
+            <ul>
+              <li><strong>Percentage:</strong> - 75.8%</li>
+            </ul>
+          </div>
+
+          <!-- Technical Skills -->
+          <div class="resume-section-title">Technical Skills</div>
+          <ul class="resume-skills-list">
+            <li><strong>Programming Languages:</strong> Python, Java, C, C++</li>
+            <li><strong>Machine Learning &amp; AI:</strong> TensorFlow, OpenCV, Pandas, NumPy, Matplotlib</li>
+            <li><strong>Databases:</strong> MySQL, Supabase</li>
+            <li><strong>Cloud &amp; Deployment:</strong> Vercel, Render, Supabase</li>
+            <li><strong>APIs &amp; AI Tools:</strong> OpenRouter API, Google Gemini API, OpenAI (ChatGPT) API &nbsp;|&nbsp; <strong>Version Control:</strong> Git, GitHub</li>
+          </ul>
+
+          <!-- Experience -->
+          <div class="resume-section-title">Experience</div>
+          <div class="resume-entry">
+            <div class="resume-entry-top">
+              <span>It networkz – Nagpur</span>
+              <span>7th June 2023 - 18th July 2023</span>
+            </div>
+            <ul>
+              <li>Developed a backend HRMS using <strong>Java</strong> and <strong>Spring Boot</strong> to manage employee records, attendance, and leave requests.</li>
+              <li>Designed <strong>RESTful APIs</strong> with <strong>MySQL</strong> for secure data storage and efficient data management.</li>
+              <li>Used <strong>Git &amp; GitHub</strong> for version control while following a scalable and maintainable architecture.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry" style="margin-top: 10px;">
+            <div class="resume-entry-top" style="font-size: 0.95rem; font-weight: 700;">
+              <span>Industry Collaboration Experience</span>
+            </div>
+            <ul style="margin-top: 4px;">
+              <li>Collaborating with industry professionals on the further development of a <strong>Workflow Optimization System</strong> following hackathon recognition.</li>
+            </ul>
+          </div>
+
+          <!-- Projects -->
+          <div class="resume-section-title">Projects</div>
+          <div class="resume-entry">
+            <div class="resume-entry-top">
+              <span>Secure Process Management System (SPMS):</span>
+              <span style="font-size: 0.88rem; color: #475569; font-weight: 500;">Java, MySQL, TCP/IP, Linux</span>
+            </div>
+            <ul>
+              <li>Built a LAN-based system for creating, managing, and blocking users.</li>
+              <li>Implemented website filtering to control internet access across the LAN.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-top">
+              <span>HerbalCare Advisor:</span>
+              <span style="font-size: 0.88rem; color: #475569; font-weight: 500;">React.js, Node.js, Express.js, MongoDB</span>
+            </div>
+            <ul>
+              <li>Recommends suitable herbs based on users' health concerns.</li>
+              <li>Provides detailed information on herbs, including benefits, usage, and precautions.</li>
+            </ul>
+          </div>
+
+          <!-- Accomplishments -->
+          <div class="resume-section-title">Accomplishments</div>
+          <ul class="resume-skills-list">
+            <li>Participated in 5+ hackathons; achieved 3rd place in one event by developing an innovative solution under time constraints</li>
+            <li>Competed in MSBTE competition and achieved 5th place among participants</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="brand-logo" style="width: 28px; height: 28px; font-size: 0.9rem;">DN</div>
+        <span style="font-family: var(--font-display); font-weight: 700; color: var(--text-highlight);">Daksh Nimkar</span>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-copy">
+        Crafted with precision • © 2026 Daksh Nimkar. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Execution -->
+  <script src="./js/main.js"></script>
+
+  <!-- Small helper script for theme menu toggle -->
+  <script>
+    const themeBtn = document.getElementById('theme-btn');
+    const themeMenu = document.getElementById('theme-menu');
+    if (themeBtn && themeMenu) {
+      themeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themeMenu.style.display = themeMenu.style.display === 'flex' ? 'none' : 'flex';
+      });
+      document.addEventListener('click', () => {
+        themeMenu.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
